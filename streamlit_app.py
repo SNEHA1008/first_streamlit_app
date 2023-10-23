@@ -1,3 +1,5 @@
+
+
 import streamlit
 streamlit.title("My Mom's New Healthy Diner")
 streamlit.header('Breakfast Favorites')
@@ -38,4 +40,5 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?','Kiwi')
 streamlit.write('Thanks for adding ', add_my_fruit)
 add_my_fruit_response = requests.get("https://fruityvice.com/api/fruit/"+ add_my_fruit)
 
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
